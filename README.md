@@ -1,5 +1,10 @@
 ### Hi there 👋
 
+<h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="45px" />, I'm Sherif Rahim </h1>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=sherifrahim&style=flat-square" alt="sherifrahim" /> </p>
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=sherifrahim&show_icons=true" alt="sherifrahim" /> </p>
+
+
 <!--
 **sherifrahim/sherifrahim** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
