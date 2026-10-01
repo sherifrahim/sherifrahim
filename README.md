@@ -105,12 +105,13 @@ I like the engineering half of security: onboarding log sources properly, writin
 
 ---
 
-## 🕵️ Follow the intruder
+## 🧭 How I build
 
-Phishing → stolen credentials → encoded PowerShell → credential dump → lateral movement → exfiltration.
-I turned that intrusion into an interactive walkthrough — pick a stage and see where a well-tuned SOC catches it.
+Six habits that show up in my day job and my side projects alike — each with the receipts:
 
-**[▶ Play it on the portfolio](https://sherifrahim.github.io/portfolio/#detection)**
+**Show your reasoning** · **Fail loudly, never silently** · **Tune for signal, not volume** · **Test the claims** · **Write it down so others can run it** · **Private by default**
+
+**[▶ See them in practice on the portfolio](https://sherifrahim.github.io/portfolio/#principles)**
 
 ---
 
