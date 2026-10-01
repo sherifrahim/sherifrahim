@@ -105,32 +105,14 @@ I like the engineering half of security: onboarding log sources properly, writin
 
 ---
 
-<details>
-<summary><b>🔎 A query I'd actually ship — brute force followed by a successful sign-in (T1110)</b></summary>
+## 🕵️ Follow the intruder
 
-```kusto
-let successWindow = 1h;
-let failures =
-    SigninLogs
-    | where TimeGenerated > ago(24h)
-    | where ResultType in ("50126", "50053", "50057")
-    | summarize FailedCount = count(), FirstFail = min(TimeGenerated)
-        by UserPrincipalName, IPAddress
-    | where FailedCount >= 10;
-failures
-| join kind=inner (
-    SigninLogs
-    | where TimeGenerated > ago(24h)
-    | where ResultType == 0
-    | project SuccessTime = TimeGenerated, UserPrincipalName, IPAddress, AppDisplayName
-) on UserPrincipalName, IPAddress
-| where SuccessTime between (FirstFail .. (FirstFail + successWindow))
-| project UserPrincipalName, IPAddress, FailedCount, SuccessTime, AppDisplayName
-```
+Phishing → stolen credentials → encoded PowerShell → credential dump → lateral movement → exfiltration.
+I turned that intrusion into an interactive walkthrough — pick a stage and see where a well-tuned SOC catches it.
 
-More like this, with the full story, on the [portfolio](https://sherifrahim.github.io/portfolio/#detection).
+**[▶ Play it on the portfolio](https://sherifrahim.github.io/portfolio/#detection)**
 
-</details>
+---
 
 <div align="center">
 
